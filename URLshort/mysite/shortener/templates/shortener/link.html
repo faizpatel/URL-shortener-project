@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<title>URL Shortener</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>URL Shortener</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Shorten</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Shorten</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+
+<div class="w3-container w3-padding-64 w3-center" id="team" >
+
+  <div class="w3-container w3-display-topleft w3-margin-bottom" style="position:absolute; left:50px; top:95px;">  
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">Welcome! Click me.</button>
+  </div>
+
+  <div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Welcome to our URL shortener!</h4>
+      <h5>Created by Faiz (Frontend) and Vamsi (Backend)</h5>
+    </header>
+    <div class="w3-container">
+      <p>We hope our service was of use to you!</p>
+      <p>Go to Vamsi's <a class="w3-text-teal" href="https://github.com/VamsiGajjela">Github</a> or Faiz's <a class="w3-text-teal" href="https://github.com/faizpatel">Github</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Thank you for using our service!</p>
+    </footer>
+  </div>
+</div>
+<h2>OUR TEAM</h2>
+<p>Meet the team</p>
+
+<div class="w3-row"><br>
+
+
+
+<div class="w3-container" style="position:absolute; left:750px; top:195px;">
+  <img src="https://media.licdn.com/dms/image/C4D03AQGWSoRRxDkycg/profile-displayphoto-shrink_200_200/0?e=1567641600&v=beta&t=TGVfrGCtQKzVHlirzXEKznRGmsVerOylDgbErNBLxdI" alt="Boss" style="width:65%" class="w3-circle w3-hover-opacity">
+  <h3>Faiz Patel</h3>
+  <p>Frontend Developer</p>
+</div>
+
+<div class="w3-quarter" style="position:absolute; left:850px; top:195px;">
+  <img src="https://scontent.fyto1-1.fna.fbcdn.net/v/t1.0-1/p240x240/65954028_2414833171925621_2928964548213866496_n.jpg?_nc_cat=105&_nc_oc=AQlWs9pBL2xzkNyfj5ldiSEaC53o6cZCz_wybk_OyjykkL6_IaQ69gq7ytDdOr8rF0-Lg9O1h00-pv-MIFNv5hwj&_nc_ht=scontent.fyto1-1.fna&oh=93663ffaf5d99d327c03a9fdd5fd0404&oe=5DB1DB94" alt="Boss" style="width:34.3%" class="w3-circle w3-hover-opacity">
+  <h3>Vamsi Gajella</h3>
+  <p>Backend Developer</p>
+</div>
+
+
+</div>
+</div>
+
+<div class="w3-display-container w3-animate-opacity"style="width:100%;min-height:200px;max-height:350px;">
+</div>
+
+
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="main" style="font-family:Verdana;">
+    <h2><center>URL Shortener!</center></h2>
+    <p><center>Here is your new link.</center></p>
+    <form action="." method="POST" >{% csrf_token %}
+    	<center>https://vamsiandfaiz.com/{{object.shortcode}}</center>
+    	<br><center><input type="submit" value="Another one!"></center>
+    </form>
+</div>
+
+
+</div>
+
+
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Instagram"><i class="fa fa-instagram"></i></a>
+  <p>Powered by Faiz & Vamsi</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
